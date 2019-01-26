@@ -1,7 +1,13 @@
+.header{
+    background: $secondary-color;
+
+}
 .header__logo{
     padding: 2rem;
     text-transform: uppercase;
-    color: $primary-color-light;
+    color: $primary-color-dark;
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 .search {
@@ -39,7 +45,7 @@
         background: transparent;
         border: none;
         transition: all .2s;
-        fill: var(--color-grey-dark-3);
+        fill: currentColor;
         cursor: pointer;
 
         &:focus {
@@ -58,13 +64,26 @@
 
 }
 
-//USER NOTIFICATION
+//USER NAVIGATION
 .user-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
     margin-left: 2rem;
+    font-weight: 500;
+
+    &__member{
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: $primary-color-light;
+        font-weight: 900;
+        font-size: 1.8rem;
+        align-self: stretch;
+        background: $primary-color;
+        padding: 0 1rem;
+}
 
     &>* {
         padding: 0 2rem;
@@ -72,10 +91,13 @@
         height: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
-    &>*:hover {
-        background: blue;
+    &>*:hover,
+     {
+        background: $primary-color;
+        color: $primary-color-light;
     }
 
     &__icon-box {
@@ -97,13 +119,13 @@
 .side-nav {
     font-size: 1.4rem;
     list-style: none;
-
-
+    background: $primary-color;
+    
     &__item {
         margin-top: 1rem;
         position: relative;
-
-
+        
+        
         &::before {
             content: "";
             position: absolute;
@@ -111,29 +133,30 @@
             left: 0;
             height: 100%;
             width: 3px;
-            background: blue;
+            background: $primary-color;
             transform: scaleY(0);
             transition: transform .2s,
-                width .1s cubic-bezier(1, 0, 0, 1) .2s,
-                background .3s;
+            width .1s cubic-bezier(1, 0, 0, 1) .2s,
+            background .3s;
         }
-
+        
         &:hover::before,
         &--active::before {
             transform: scaleY(1);
             width: 100%;
         }
-
+        
         &:active::before {
-            background: blue;
+            background: $primary-color-dark;
         }
     }
-
+    
     &__link:link,
     &__link:visited {
         display: block;
-        color: blue;
+        color: $primary-color-dark;
         text-decoration: none;
+        align-self: stretch;
         text-transform: uppercase;
         font-weight: 400;
         display: flex;
@@ -157,10 +180,73 @@
 
 .main{
     background-image: linear-gradient(to right bottom, rgba($primary-color-light, .5%), rgba($primary-color, .9)), url(/img/cover.jpg);
-    height: 80vh;
+    height: 70vh;
     background-size: cover;
     background-position: center;
+    position: relative;
 
-    &__photo{
+    &__text{
+        position: absolute;
+        top: 30%;
+        left: 15%;
+    }
+    
+    &__header{
+        
+        &-1{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+        }
+
+        &-2{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+
+    &__secondary{
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    &__button{
+        margin-right: 2rem;
+        padding: 1rem 2rem;
+        box-shadow: 0 1rem 2rem rgba($primary-color, .9);
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        outline: none;
+        color: $primary-color-dark;
+        background: $secondary-color;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
     }
 }
+
+.footer{
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background: $secondary-color;
+
+    .list{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+        list-style: none;
+        
+        &__items{
+            flex-direction: column;
+            display: flex;
+            padding: 1rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
+

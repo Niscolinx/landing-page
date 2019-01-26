@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>landing page</title>
-</head>
-<body>
-    <h1>This is gonna be the landing page</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>landing page</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h4 class="header__logo">Logo</h4>
+                
+            <form action="#blank" class="search">
+                <input type="text" class="search__input" placeholder="Begin your search">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite3.svg#icon-magnifying-glass">
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user-nav"> 
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-bookmark">
+                    </svg>
+                    <span class="user-nav__user">Become a Member</span>
+                </div>
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-chat">
+                    </svg>
+                    <span class="user-nav__user">Log In</span>
+                </div>
+
+                <div class="user-nav__user">
+                    <span class="user-nav__user">Sign Up</span>
+                </div>
+            </nav>
+        </header>
+        <figure class="content">
+
+                <nav class="sidebar">
+                    <ul class="side-nav">
+                        <li class="side-nav__item side-nav__item--active">
+                            <a href="#blank" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite2.svg#icon-users"/>
+                                </svg>
+                                <span>Our Team</span>
+                            </a>
+                        </li>
+                        <li class="side-nav__item">
+                            <a href="#blank" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite2.svg#icon-database"/>
+                                </svg>
+                                <span>SME Advisory Services</span>
+                            </a>
+                        </li>
+                        <li class="side-nav__item">
+                            <a href="#blank" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite2.svg#icon-help-with-circle"/>
+                                </svg>
+                                <span>Ask a Question</span>
+                            </a>
+                        </li>
+                        <li class="side-nav__item">
+                            <a href="#blank" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite2.svg#icon-bell"/>
+                                </svg>
+                                <span>Become an Advisor</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="main">
+                    <div class="main__text">
+                        <div class="main__header">
+                            <h4 class="main__header-1">Online access to the greatest business minds</h4>
+                            <br>
+                            <p class="main__header-2">A highly respected, credible and identified network of advisors</p>
+                        </div>
+                        <div class="main__secondary">
+                            <button class="main__button">Ask a Question</button>
+                            <button class="main__button">Learn to Succeed</button>
+                        </div>
+                    </div>
+                </div>
+
+            <footer class="footer">
+                hello
+            </footer>
+    </div>
 </body>
 </html>
